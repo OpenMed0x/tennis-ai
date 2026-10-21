@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* 网球配色：荧光黄绿（球）+ 白色（球线、场地线）。
+   黄绿底上一律用深色字（ink），因为白字在黄绿色上看不清。 */
+@theme {
+  --color-ball-50: #fafde6;
+  --color-ball-100: #f3fab9;
+  --color-ball-300: #e4f46b;
+  --color-ball-500: #d4ec26; /* 主色：网球黄绿 */
+  --color-ball-600: #bdd616;
+  --color-ball-700: #6f8a00; /* 描边、图标 */
+  --color-ball-800: #4a5e00; /* 白底上的链接文字 */
+  --color-ink: #1e2a0a;      /* 深橄榄黑：正文、黄绿底上的文字 */
+  --color-line: #e4e8d0;     /* 淡分隔线 */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
+:root { color-scheme: light; }
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ball-800);
+  outline-offset: 2px;
+}
